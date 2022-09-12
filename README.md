@@ -2,4 +2,4 @@
 
 #### Project with node.js
 
-Utilising express
+Using express
