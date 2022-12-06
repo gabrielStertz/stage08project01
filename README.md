@@ -13,13 +13,13 @@ Using express
 >
 > Then type the command `npm run migrate` to create the **database.db**
 >
-> Then type the command `npm run dev` to run the **nodemon**
+> Then type the command `npm start` to run the **node**
 >
 
 ### End-points
 
 >
->to create user: `POST` in `localhost:3335/users` in JSON:
+>to create user: `POST` in `http://localhost:3335/users` in JSON:
 >
 
 ```json
@@ -31,7 +31,18 @@ Using express
 ```
 
 >
->to update user: `PUT` in `localhost:3335/users/<user_id>` in JSON:
+>to create a token for authentification: `POST` in `http://localhost:3335/sessions` in JSON:
+>
+
+```json
+  {
+    "email": "E-mail valid",
+    "password": "Password valid"
+  }
+```
+
+>
+>to update user: `PUT` in `http://localhost:3335/users` in JSON:
 >
 
 If want to make changes in `name` or `e-mail`:
@@ -55,7 +66,7 @@ If want to change the `password`:
 ```
 
 >
-> To create a note: `POST` in `localhost:3335/notes/<user_id>` in JSON:
+> To create a note: `POST` in `http://localhost:3335/notes` in JSON:
 >
 
 ```json
@@ -68,11 +79,11 @@ If want to change the `password`:
 ```
 
 >
-> To show a note: `GET` in `localhost:3335/notes/<note_id>`
+> To show a note: `GET` in `http://localhost:3335/notes/<note_id>`
 >
-> To delete a note: `DELETE` in `localhost:3335/notes/<note_id>`
+> To delete a note: `DELETE` in `http://localhost:3335/notes/<note_id>`
 >
-> To show all notes: `GET` in `localhost:3335/notes`
+> To show all notes: `GET` in `http://localhost:3335/notes`
 >
-> To show all tags of user: `GET` in `localhost:3335/tags/<user_id>`
+> To show all tags of user: `GET` in `http://localhost:3335/tags`
 >
